@@ -41,8 +41,10 @@ export default class NewsApi extends Component {
                 {this.state.resp.map((iterate) => {
 
                     return (
-                        <h2> {iterate.author} </h2> 
-        
+                        <div>
+                            <h2> {iterate.author} </h2> 
+                            <h3> {iterate.content} </h3>
+                        </div>
                     )
                 })}
 
