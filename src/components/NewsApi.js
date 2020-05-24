@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 
 export default class NewsApi extends Component {
     constructor(props) {
@@ -13,8 +14,9 @@ export default class NewsApi extends Component {
     componentDidMount() {
 
         const endpoint = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=';
-
         const key = 'c4abb60cc9534bb7958d8bc984a81f69';
+
+        
     }
 
 
