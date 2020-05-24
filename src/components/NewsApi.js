@@ -19,6 +19,10 @@ export default class NewsApi extends Component {
         axios.get(endpoint+key)
         .then(Response => {
             console.log(Response)
+            
+            this.setState({
+                data: Response
+            })
         })
         .catch(error => {
             console.log(error)
