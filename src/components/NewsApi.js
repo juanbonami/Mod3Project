@@ -16,7 +16,10 @@ export default class NewsApi extends Component {
         const endpoint = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=';
         const key = 'c4abb60cc9534bb7958d8bc984a81f69';
 
-        
+        axios.get(endpoint+key)
+        .then(Response => {
+            console.log(Response)
+        })
     }
 
 
