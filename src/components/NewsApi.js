@@ -20,6 +20,9 @@ export default class NewsApi extends Component {
         .then(Response => {
             console.log(Response)
         })
+        .catch(error => {
+            console.log(error)
+        })
     }
 
 
