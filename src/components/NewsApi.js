@@ -43,7 +43,9 @@ export default class NewsApi extends Component {
                     return (
                         <div>
                             <h2> {iterate.author} </h2> 
-                            <h3> {iterate.content} </h3>
+                            <h3> {iterate.description} </h3>
+                            <h3> {iterate.title} </h3>
+                            <img src={iterate.urlToImage} />
                         </div>
                     )
                 })}
