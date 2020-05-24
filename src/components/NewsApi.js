@@ -6,7 +6,7 @@ export default class NewsApi extends Component {
         super(props)
 
         this.state = {
-            data: []
+            resp: []
         }
 
     }
@@ -18,11 +18,12 @@ export default class NewsApi extends Component {
 
         axios.get(endpoint+key)
         .then(Response => {
-            console.log(Response)
-            
+            console.log(Response.data.articles)
+
             this.setState({
-                data: Response
+                resp: Response.data.articles
             })
+            console.log(this.state.resp)
         })
         .catch(error => {
             console.log(error)
@@ -35,7 +36,16 @@ export default class NewsApi extends Component {
     render() {
         return (
             <div>
-                
+
+                <h2>Something</h2>
+                {this.state.resp.map((iterate) => {
+
+                    return (
+                        <h2> {iterate.author} </h2> 
+        
+                    )
+                })}
+
             </div>
         )
     }
