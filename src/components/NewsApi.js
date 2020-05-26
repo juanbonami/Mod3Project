@@ -42,12 +42,6 @@ export default class NewsApi extends Component {
 
                     return (
                         <div>
-                            {/* <h2> {iterate.author} </h2> 
-                            <h3> {iterate.description} </h3>
-                            <h3> {iterate.title} </h3>
-                            <a href={iterate.url}>
-                                <img src={iterate.urlToImage} />
-                            </a> */}
 
                         <Grid inverted>
                             <Grid.Row>
