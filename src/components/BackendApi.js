@@ -6,7 +6,9 @@ export default class BackendApi extends Component {
         super(props)
 
         this.state = {
-            info: ''
+            name: '',
+            release: '',
+            subject: ''
         }
     }
 
