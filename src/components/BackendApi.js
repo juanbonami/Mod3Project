@@ -44,13 +44,13 @@ export default class BackendApi extends Component {
             <div>
                 <form>
                     <div>
-                        <input type="text" name="name" value={name} />
+                        <input type="text" name="name" value={name} onChange={this.changeHandler} />
                     </div>
                     <div>
-                        <input type="text" name="release" value={release} />
+                        <input type="text" name="release" value={release} onChange={this.changeHandler} />
                     </div>
                     <div>
-                        <input type="text" name="subject" value={subject} />
+                        <input type="text" name="subject" value={subject} onChange={this.changeHandler} />
                     </div>
                 </form>
             </div>
