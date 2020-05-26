@@ -7,8 +7,8 @@ export default class BackendApi extends Component {
 
         this.state = {
             name: '',
-            release: '',
-            subject: ''
+            subject: '',
+            release: ''
         }
     }
 
@@ -19,10 +19,11 @@ export default class BackendApi extends Component {
     }
 
     submitHandler = (e) => {
+        // post method works in postman but seems to fail when i run the code...
         e.preventDefault()
         console.log(this.state)
-        const api = 'http://localhost:8080/comments';
-        axios.post(api, this.state)
+        // const api = 'http://localhost:8080/comments';
+        axios.post('http://localhost:8080/comments',this.state)
         .then(Response => {
             console.log(Response)
         })
