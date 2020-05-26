@@ -39,17 +39,18 @@ export default class BackendApi extends Component {
 
 
     render() {
+        const { name, release, subject } = this.state
         return (
             <div>
                 <form>
                     <div>
-                        <input type="text" name="name" />
+                        <input type="text" name="name" value={name} />
                     </div>
                     <div>
-                        <input type="text" name="release" />
+                        <input type="text" name="release" value={release} />
                     </div>
                     <div>
-                        <input type="text" name="subject" />
+                        <input type="text" name="subject" value={subject} />
                     </div>
                 </form>
             </div>
