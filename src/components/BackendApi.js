@@ -39,7 +39,17 @@ export default class BackendApi extends Component {
     render() {
         return (
             <div>
-                {/* <h1> {this.state.info} </h1> */}
+                <form>
+                    <div>
+                        <input type="text" name="name" />
+                    </div>
+                    <div>
+                        <input type="text" name="release" />
+                    </div>
+                    <div>
+                        <input type="text" name="subject" />
+                    </div>
+                </form>
             </div>
         )
     }
