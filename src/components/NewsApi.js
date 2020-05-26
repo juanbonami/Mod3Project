@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import { Grid, Image } from 'semantic-ui-react'
+import { Grid, Image, Reveal } from 'semantic-ui-react'
 
 export default class NewsApi extends Component {
     constructor(props) {
@@ -49,12 +49,20 @@ export default class NewsApi extends Component {
                                 <img src={iterate.urlToImage} />
                             </a> */}
 
-                        <Grid celled='internally'>
+                        <Grid inverted>
                             <Grid.Row>
                                 <Grid.Column width={5}>
-                                    <a href={iterate.url}>
-                                    <Image src={iterate.urlToImage} />
-                                    </a>
+                                    <Reveal animated='move up'>
+                                        <Reveal.Content visible>                                     
+                                            <Image src='https://www.ehotelsasia.com/wp-content/uploads/2018/10/Black-Background-DX58.jpg' />                                        
+                                        </Reveal.Content>
+                                        <Reveal.Content hidden>
+                                            <a href={iterate.url}>
+                                            <Image src={iterate.urlToImage} />
+                                            </a>
+                                        </Reveal.Content>                   
+                                    </Reveal>
+                                    
                                 </Grid.Column>
 
                                 <Grid.Column width={11}>
