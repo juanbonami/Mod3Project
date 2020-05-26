@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import { Grid, Image } from 'semantic-ui-react'
 
 export default class NewsApi extends Component {
     constructor(props) {
@@ -37,17 +38,32 @@ export default class NewsApi extends Component {
         return (
             <div>
 
-                <h2>Something</h2>
                 {this.state.resp.map((iterate) => {
 
                     return (
                         <div>
-                            <h2> {iterate.author} </h2> 
+                            {/* <h2> {iterate.author} </h2> 
                             <h3> {iterate.description} </h3>
                             <h3> {iterate.title} </h3>
                             <a href={iterate.url}>
                                 <img src={iterate.urlToImage} />
-                            </a>
+                            </a> */}
+
+                        <Grid celled='internally'>
+                            <Grid.Row>
+                                <Grid.Column width={5}>
+                                    <a href={iterate.url}>
+                                    <Image src={iterate.urlToImage} />
+                                    </a>
+                                </Grid.Column>
+
+                                <Grid.Column width={11}>
+                                    <h2> {iterate.author} </h2> 
+                                    <h3> {iterate.description} </h3>
+                                    <h3> {iterate.title} </h3>
+                                </Grid.Column>
+                            </Grid.Row>
+                        </Grid>
                             
                         </div>
                     )
