@@ -12,6 +12,17 @@ export default class BackendApi extends Component {
         }
     }
 
+    changeHandler = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    submitHandler = (e) => {
+        e.preventDefault()
+        console.log(this.state)
+    }
+
     componentDidMount() {
 
         const api = 'http://localhost:8080/comments';
@@ -42,7 +53,7 @@ export default class BackendApi extends Component {
         const { name, release, subject } = this.state
         return (
             <div>
-                <form>
+                <form onSubmit={this.submitHandler}>
                     <div>
                         <input type="text" name="name" value={name} onChange={this.changeHandler} />
                     </div>
@@ -52,6 +63,8 @@ export default class BackendApi extends Component {
                     <div>
                         <input type="text" name="subject" value={subject} onChange={this.changeHandler} />
                     </div>
+
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         )
