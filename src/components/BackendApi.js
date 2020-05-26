@@ -21,32 +21,30 @@ export default class BackendApi extends Component {
     submitHandler = (e) => {
         e.preventDefault()
         console.log(this.state)
-    }
-
-    componentDidMount() {
-
         const api = 'http://localhost:8080/comments';
-
-        // axios.get(api)
-        // .then(Response => {
-        //     console.log(Response);
-        //     // this.setState({
-        //     //     info: Response
-        //     // })
-        // })
-        axios.post(api, {
-            name: 'Catsandra',
-            release: 2019,
-            subject: 'Catsandra is the fanciest cat in town!'
-        })
+        axios.post(api, this.state)
         .then(Response => {
             console.log(Response)
         })
         .catch(error => {
             console.log(error);
         })
-
     }
+
+    // componentDidMount() {
+
+        
+
+    //     // axios.get(api)
+    //     // .then(Response => {
+    //     //     console.log(Response);
+    //     //     // this.setState({
+    //     //     //     info: Response
+    //     //     // })
+    //     // })
+        
+
+    // }
 
 
     render() {
