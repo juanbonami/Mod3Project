@@ -14,12 +14,20 @@ export default class BackendApi extends Component {
 
         const api = 'http://localhost:8080/comments';
 
-        axios.get(api)
+        // axios.get(api)
+        // .then(Response => {
+        //     console.log(Response);
+        //     // this.setState({
+        //     //     info: Response
+        //     // })
+        // })
+        axios.post(api, {
+            name: 'Catsandra',
+            release: 2019,
+            subject: 'Catsandra is the fanciest cat in town!'
+        })
         .then(Response => {
-            console.log(Response);
-            // this.setState({
-            //     info: Response
-            // })
+            console.log(Response)
         })
         .catch(error => {
             console.log(error);
